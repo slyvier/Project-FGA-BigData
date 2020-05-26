@@ -1,0 +1,129 @@
+{
+  "axes": [
+    {
+      "scale": "x",
+      "title": "Time",
+      "type": "x"
+    },
+    {
+      "scale": "y",
+      "title": "Freq",
+      "type": "y"
+    }
+  ],
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {
+          "col": "data",
+          "idx": 1566595500000,
+          "val": 18
+        },
+        {
+          "col": "data",
+          "idx": 1566595560000,
+          "val": 29
+        },
+        {
+          "col": "data",
+          "idx": 1566595620000,
+          "val": 42
+        },
+        {
+          "col": "data",
+          "idx": 1566595680000,
+          "val": 39
+        },
+        {
+          "col": "data",
+          "idx": 1566595740000,
+          "val": 29
+        },
+        {
+          "col": "data",
+          "idx": 1566595800000,
+          "val": 46
+        },
+        {
+          "col": "data",
+          "idx": 1566595860000,
+          "val": 3
+        }
+      ]
+    }
+  ],
+  "height": 500,
+  "legends": [],
+  "marks": [
+    {
+      "from": {
+        "data": "table",
+        "transform": [
+          {
+            "keys": [
+              "data.col"
+            ],
+            "type": "facet"
+          }
+        ]
+      },
+      "marks": [
+        {
+          "properties": {
+            "enter": {
+              "stroke": {
+                "field": "data.col",
+                "scale": "color"
+              },
+              "strokeWidth": {
+                "value": 2
+              },
+              "x": {
+                "field": "data.idx",
+                "scale": "x"
+              },
+              "y": {
+                "field": "data.val",
+                "scale": "y"
+              }
+            }
+          },
+          "type": "line"
+        }
+      ],
+      "type": "group"
+    }
+  ],
+  "padding": "auto",
+  "scales": [
+    {
+      "domain": {
+        "data": "table",
+        "field": "data.idx"
+      },
+      "name": "x",
+      "range": "width",
+      "type": "time"
+    },
+    {
+      "domain": {
+        "data": "table",
+        "field": "data.val"
+      },
+      "name": "y",
+      "nice": true,
+      "range": "height"
+    },
+    {
+      "domain": {
+        "data": "table",
+        "field": "data.col"
+      },
+      "name": "color",
+      "range": "category20",
+      "type": "ordinal"
+    }
+  ],
+  "width": 960
+}

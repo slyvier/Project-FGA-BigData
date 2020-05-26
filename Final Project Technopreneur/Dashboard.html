@@ -1,0 +1,41 @@
+<html>  
+<head>    
+    <title>Vega Scaffold</title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="http://d3js.org/d3.geo.projection.v0.min.js" charset="utf-8"></script>
+    <script src="http://trifacta.github.com/vega/vega.js"></script>
+</head>
+<body> <h2>Hasil Pencarian Beasiswa Dalam Bahasa Inggris</h2>
+    <div id="vis"></div><h2>Grafik Garis</h2>
+    <div id="vis2"></div>
+    <h2>Hasil Pencarian Beasiswa Dalam Bahasa Indonesia</h2>
+    <div id="vis3"></div><h2>Grafik Garis</h2>
+    <div id="vis4"></div>
+</body>
+<script type="text/javascript">
+// parse a spec and create a visualization view
+function parse(spec) {
+  vg.parse.spec(spec, function(chart) { chart({el:"#vis"}).update(); });
+}
+parse("frekuensi_term_beasiswa2019en.json");
+
+
+function parse2(spec) {
+  vg.parse.spec(spec, function(chart) { chart({el:"#vis2"}).update(); });
+}
+parse2("grafik_waktu_beasiswa2019en.json");
+</script>
+<script type="text/javascript">
+function parse(spec) {
+  vg.parse.spec(spec, function(chart) { chart({el:"#vis3"}).update(); });
+}
+parse("frekuensi_term_beasiswa2019id.json");
+
+
+function parse2(spec) {
+  vg.parse.spec(spec, function(chart) { chart({el:"#vis4"}).update(); });
+}
+parse2("grafik_waktu_beasiswa2019id.json");
+</script>
+</html>
